@@ -1,0 +1,19 @@
+{
+  "name": "bharat-nirvachan-assistant",
+  "version": "1.0.0",
+  "description": "Interactive Assistant for Indian Election System",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve .",
+    "build": "echo 'Static site: No build needed. Containerize using Dockerfile.'"
+  },
+  "keywords": [
+    "election",
+    "india",
+    "assistant",
+    "education"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}

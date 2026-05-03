@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharat Nirvachan Assistant | Indian Election Guide</title>
+    <meta name="description" content="Interactive assistant for understanding the Indian election process, voter registration, and dynamic timelines.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.321.0/font/lucide.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/190/190411.png">
+    <meta name="theme-color" content="#ff9933">
+</head>
+<body class="dark-theme">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">🇮🇳</div>
+                <div class="logo-text">Bharat <span>Nirvachan</span></div>
+            </div>
+            <ul class="nav-links">
+                <li class="active" data-view="assistant"><i class="lucide-bot"></i> <span>Assistant</span></li>
+                <li data-view="timeline"><i class="lucide-calendar-days"></i> <span>Timeline</span></li>
+                <li data-view="walkthroughs"><i class="lucide-list-checks"></i> <span>Walkthroughs</span></li>
+                <li data-view="voterSlip"><i class="lucide-contact-2"></i> <span>Voter Slip</span></li>
+                <li data-view="stats"><i class="lucide-bar-chart-3"></i> <span>Voter Stats</span></li>
+                <li data-view="find"><i class="lucide-map-pin"></i> <span>Find Constituency</span></li>
+                <li data-view="calendar"><i class="lucide-calendar"></i> <span>Election Calendar</span></li>
+                <li data-view="pledge"><i class="lucide-pen-tool"></i> <span>Voter Pledge</span></li>
+                <li data-view="knowledge"><i class="lucide-book-open"></i> <span>Knowledge Hub</span></li>
+                <li data-view="decision"><i class="lucide-user"></i> <span>Personalized Hub</span></li>
+                <li data-view="quiz"><i class="lucide-trophy"></i> <span>Quiz</span></li>
+                <li data-view="scenarios"><i class="lucide-help-circle"></i> <span>Scenarios</span></li>
+            </ul>
+            <div class="sidebar-footer">
+                <button id="lang-toggle" class="btn-secondary">English | हिंदी</button>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <header class="top-bar">
+                <div class="search-box">
+                    <i class="lucide-search"></i>
+                    <input type="text" id="global-search" placeholder="Ask about elections (e.g. How to register?)...">
+                </div>
+                <div class="user-profile">
+                    <div class="persona-selector">
+                        <span>Persona:</span>
+                        <select id="persona-select">
+                            <option value="general">General Citizen</option>
+                            <option value="first-time">First-time Voter</option>
+                            <option value="student">Student</option>
+                        </select>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dynamic Views -->
+            <section id="view-container">
+                <!-- Views will be injected here via JS -->
+                <div id="loading-spinner" class="spinner"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <span class="ticker-item">● Upcoming: Kerala State Assembly Elections - May 2026</span>
+            <span class="ticker-item">● Reminder: Last date for voter registration in Zone 4 is May 15th</span>
+            <span class="ticker-item">● News: ECI announces new guidelines for digital campaigning</span>
+            <span class="ticker-item">● Fact: Over 900 million citizens are eligible to vote in India</span>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
